@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign_Up/Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="A service rendering web App">
+        <meta name="keyword" content="content Services, webApp, signup page, login page">
+        <meta name="author" content="Carriage">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <link rel="stylesheet" href="./fontawesome/css/all.css">
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navbar1">
+                <a href="#" class="left">
+                    <span id="sm--radius">Analyst report</span>
+                    Carriage "a game-changer" in Forrester Wave<sup style="font-size: 9px">TM</sup>:Web CMS, Q4 2018
+                </a>
+                <ul class="top--navlinks">
+                    <li><a href="#"><i class="fas fa-search"></i>documentation</a></li>
+                    <li><a href="#">help</a></li>
+                    <li><a href="./signup_login.html">login</a></li>
+                </ul>
+            </nav>
+            <nav class="navbar2">
+                <a href="./index.html" id="home">
+                    <img id="favicon" src="./images/favicon.png" alt="favicon"><span>Carriage</span>
+                </a>
+                <ul class="links" role="navigation">
+                    <!-- <div class="dropdown"> -->
+                    <li class="dropdown">Product <i class="fas fa-angle-down"></i>
+                        <ul class="dropdown--menu">
+                            <a href="#" class="dropdown--item">Why Carriage?</a>
+                            <a href="#" class="dropdown--item">Content Infrastructure</a>
+                            <a href="#" class="dropdown--item">Features</a>
+                            <a href="#" class="dropdown--item">For Enterprise</a>
+                            <a href="#" class="dropdown--item">Partners</a>
+                        </ul>
+                    </li>
+                
+                    <li class="dropdown">solutions<i class="fas fa-angle-down"></i>
+                        <ul class="dropdown--menu">
+                                <a href="#" class="dropdown--item">Why Carriage?</a>
+                                <a href="#" class="dropdown--item">Content Infrastructure</a>
+                                <a href="#" class="dropdown--item">Features</a>
+                                <a href="#" class="dropdown--item">For Enterprise</a>
+                                <a href="#" class="dropdown--item">Partners</a>
+                            </ul>
+                    </li>
+                            
+                    <li><a href="#">customers</a></li>
+                    <li class="dropdown">Learn<i class="fas fa-angle-down">
+                        <ul class="dropdown--menu">
+                            <a href="#" class="dropdown--item">Why Carriage?</a>
+                            <a href="#" class="dropdown--item">Content Infrastructure</a>
+                            <a href="#" class="dropdown--item">Features</a>
+                            <a href="#" class="dropdown--item">For Enterprise</a>
+                            <a href="#" class="dropdown--item">Partners</a>
+                        </ul>
+                    </i>
+
+                    </li>
+                    <li><a href="./pricing.html">pricing</a></li> 
+                </ul>
+                <ul>
+                    <li class="quicklink" ><a href="./contact.html" >Talk to us</a></li>
+                    <li class="quicklink white"><a href="./signup_login.html">try for free</a></li>
+                </ul>
+            </nav>
+            <!--End of navigation-->
+
+        
+        </header>
+        <main class="page">
+            <section>
+                <!-- <div class="grid-display"> -->
+                    <div class="flip-card">
+                        <div class="front-view">
+                            <form data-sign-up id="signup_form" class="contact--form" method="POST">
+                                <div class="row">
+                                    <div class="field--block">
+                                        <label for="fname">First name</label>
+                                        <input type="text" id="fname" class="form--type" name="firstName" required>
+                                    </div>
+                                    <div class="field--block">
+                                        <label for="lname">Last name</label>
+                                        <input type="text" id="lname" class="form--type" name="LastName" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="user">Username</label>
+                                    <input type="text" id="user" class="form--type" name="user" required>
+                                </div>
+                                <div class="row">
+                                    <label for="tel">Email</label>
+                                    <input type="tel" id="tel" class="form--type" name="tel" required>
+                                </div>
+                                <span class="toggle"><a href="#login_form">Already have an account? Login now!</a></span>
+                            </form>
+                        </div>
+                        <div class="back-view">
+                            <form data-login id="login_form" class="contact--form" method="POST">
+                                <div class="row">
+                                    <label for="user">Username</label>
+                                    <input type="text" id="user" class="form--type" name="user" required>
+                                </div>
+                                <div class="row">
+                                    <label for="psw">Username</label>
+                                    <input type="password" id="psw" class="form--type" name="psw" required>
+                                </div>
+                                <span>Don't have an account?<a class="toggle" href="#signup_form">Sign Up Now!</a></span>
+                            </form>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </section>
+        </main>
+        <script src="./js/form.js" type="text/javascript"></script>
+    </body>
+</html>
+
+<!-- Hint: Create a login and signup form, both shold be toggle-enabled
+with 3d perspective and rotate 180deg. The toggle should be activated
+when a link pointing to the destined form with an ID is clicked.
+However it should be coded such that visiting any of the 3d surface
+from an external webpage should automatically toggle the form to a readystate
+for interaction. -->
+
+<!-- New!!! You can aswell code the html structure in javascript as template literal and it should be
+displayed in a modal box which will pop up when the login/sign_up buton is clicked. Note that
+the forms should obey hint 1. -->
+
+<!-- You can as well create a user platform for this site, then should you start implementing
+AJAX. (Read up how and when to use AJAX). Consider directing the user to this platform when
+he filled the login form with valid formats. Hint: (Learn Local Storage). You can use Local
+storage to be saving and authenticating the username and password -->

@@ -1,0 +1,194 @@
+/* @import './style.main.css'; */
+
+:root {
+    --background-color: rgb(4, 14, 71);
+    --text-color: #fff;
+    --grey: #a0a0a0;
+    --text-color-with-opacity: rgba(255, 255, 255, 0.781);
+    --font-family: "Avenir Next W01", 
+        -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", 
+        "Segoe UI Symbol";
+}
+
+section {
+    padding: 10px;
+    margin-top: 50px;
+}
+
+header, main {
+    background: 
+    linear-gradient(45deg, var(--background-color) 0%,rgba(0, 0, 0, 0.521) 0%), 
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.321) .7%, rgba(0, 0, 0, 0.678) .9%),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.321) .5%, rgba(0, 0, 0, 0.678) .7%);
+}
+
+main {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 1);
+    margin-bottom: 100vh;
+}
+
+/* .grid-display > .grid-element {
+    align-items: flex-start;
+} */
+
+
+section .grid-display > .heading {
+    color: #fff;
+}
+
+section .grid-element > .sub-heading {
+    position: relative;
+    margin-top: 60px;
+}
+
+section .grid-display > .grid-element {
+    position: relative;
+    width: 31%;
+    height: 350px;
+    background: #fff;
+    margin-right: 10px;
+    padding: 0px 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.grid-element.active {
+    background: rgba(0, 0, 255, 0.212);
+}
+
+section .grid-display > .grid-element:hover {
+    background: rgba(0, 0, 255, 0.212);
+}
+
+section .grid-display > .grid-element:hover  .btn {
+    top: 75%;
+}
+
+section .grid-display > .grid-element:hover .btn,
+section .grid-display > .grid-element:hover .sub-heading,
+section .grid-display > .grid-element:hover .text {
+    color: #fff;
+}
+
+
+
+.grid-element img {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height:100%;
+    z-index: -1;
+
+}
+.grid-element > .heading {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #615e5e;
+    padding: 0px 0px 40px;
+    margin: 0px 0px 10px;
+    text-align: center;
+}
+
+.grid-element > .btn {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 50px !important;
+    /* display: none; */
+}
+
+.contact.col-2 {
+    display: none;
+}
+
+.contact.col-2.active {
+    display: flex;
+}
+.desc > .title {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.801);
+    word-spacing: 3px;
+    letter-spacing: 2px;
+
+}
+/*Styling the contact form*/
+
+.contact--form {
+    max-width: 502px;
+    padding: 35px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
+    background: #ffff;
+    margin-bottom: 30px;
+    /* font-family: Roboto !important; */
+}
+
+
+.contact--form .row:first-child {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.field--block:not(:last-child) {
+    margin-right: 20px;
+    
+}
+
+.row  label {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px 0px 0px 2px;
+    color: var(--grey);
+    font-size: 1em; 
+    font-weight: 500;
+}
+
+input[type="text"], input[type="email"],
+ textarea {
+    padding: 15px;
+}
+
+select {
+    padding-left: 15px;
+}
+
+
+/* .form--type:hover {
+    border: .5px solid var(--background-color);
+} */
+
+.form--type {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    background: #bbb7b79f;
+    font: 1.08em var(--font-family);
+    margin-bottom: 15px;
+    
+}
+
+textarea {
+    height: 150px !important;
+}
+
+input[type="submit"] {
+    outline: none;
+    border: none;
+    background: var(--background-color);
+    color: #fff;
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}

@@ -1,0 +1,286 @@
+:root {
+    /* --background-color: rgb(4, 14, 71); */
+    --text-color: #fff;
+    --grey: #a0a0a0;
+    --text-color-with-opacity: rgba(255, 255, 255, 0.781);
+    --font-family: Roboto, "Avenir Next W01", 
+        -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", 
+        "Segoe UI Symbol";
+    --adv--background:
+    linear-gradient(45deg, var(--background-color) 0%,rgba(0, 0, 0, 0.521) 0%), 
+    repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.321) .7%, rgba(0, 0, 0, 0.678) .9%),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.321) .5%, rgba(0, 0, 0, 0.678) .7%);
+}
+
+* {
+    transition: unset;
+    vertical-align: middle;
+}
+
+header, .linear-grad{
+    background: var(--adv--background);
+}
+
+
+
+
+
+[data-pricing-desc] > .grid-display > .grid-element {
+    width: 49%;
+    display: block;
+    text-align: left;
+}
+
+.grid-element > .heading {
+    text-align: justify;
+}
+
+.grid-display > .grid-element  .text {
+    text-align: left;
+}
+
+.circular-shape {
+    position: absolute;
+    left: -35%;
+    width: 110%;
+    height: 950px;
+    background: var(--adv--background);
+    opacity: .4;
+    border-radius: 0% 100% 100% 0% / 30% 47% 53% 70%;
+}
+
+.row {
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: 24px;
+    margin-bottom: 0px;
+}
+
+.timeline i {
+    font-size: 2.5em;
+}
+
+.timeline .join {
+    width: 0.5px;
+    height: 42px;
+    border-right: 1px dashed;
+    margin: 1px 0;
+}
+
+.grid-element .row > .text-content {
+    width: fit-content;
+    margin: 0px;
+    padding: 0px;
+}
+
+[data-pricing-desc] .col-2 {
+    border-radius: 15px;
+    border-top: 4px solid var(--background-color);
+    align-items: center;
+    padding: 5% 5% 15px 5%;
+    box-shadow: 2px 3px 10px #a0a0a0;
+}
+
+[data-pricing-desc] .col-2 .text,
+ [data-pricing-category] .wrapper .heading,
+ [data-pricing-category] .wrapper .text {
+    color: #000;
+}
+
+.col-2 > .text, .col-2.benefits{
+    width: 24%;
+}
+
+[data-pricing-category] {
+    margin-top: -20px;
+    z-index: 1;
+}
+
+[data-pricing-category] .grid-display {
+    margin-top: 50px;
+}
+
+[data-pricing-category] .center-align .text {
+    width: 50%;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.flip-card {
+    position: relative;
+    width: 29%;
+    height: 650px;
+    margin-right: auto;
+    transform-style: preserve-3d;
+
+    /* transform: perspective() */
+    perspective: 500px;
+    transition: all 0.5s ease;
+    box-shadow: 5px 4px 5px 1px #a0a0a0;
+    border-radius: 12px;
+    cursor: pointer;
+
+}
+ .flip-card:hover {
+    /* transform: rotateY(180deg); */
+    transform: scaleY(1.01);
+}
+
+.flip-card:hover .front-view > .card.price-card {
+    background: var(--background-grad);
+    color: #fff;
+}
+
+.price-card:hover .price--circle,
+.price-card:hover .btn {
+    background: #fff;
+    color: #000;
+}
+
+.price-card:hover [data-plan] .benefit,
+.price-card:hover .title {
+    color: #fff;
+}
+.flip-card .front-view > .card.price-card,
+ .flip-card .back-view > .card.price-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    color: #363434;
+    padding-top: 20px;
+    border-radius: inherit;
+}
+
+/* .flip-card .front-view {
+    background: rgb(255, 254, 254);
+} */
+
+.title {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.flip-card .back-view {
+    transform: rotateY(180deg);
+    background: rgb(179, 9, 9);
+
+}
+
+.price--circle {
+    margin-top: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right,
+     var(--background-color),
+    rgba(0, 0, 0, 0.863));
+    line-height: 120px;
+}
+
+.price--circle > div {
+    display: inline-block;
+    line-height: normal;
+
+    vertical-align: middle;
+}
+
+.price--circle .price {
+    font: 2em var(--font-family);
+    font-weight: 700;
+    top: 50%;
+}
+
+
+.price--circle .price .cent {
+    font-size: .45em;
+    font-weight: 400;
+}
+
+.price--circle .duration {
+    display: block;
+    margin-top: 10px;
+}
+
+[data-plan] {
+    width: 90%;
+    margin: 20px auto;
+}
+
+[data-plan] .benefit {
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 28px 0;
+    position: relative;
+    font-size: .9em;
+    color: #a0a0a0;
+    vertical-align: middle;
+}
+
+.name span {
+    text-align: left;
+}
+.name i {
+    margin-right: 15px;
+}
+
+[data-plan] .benefit .name {
+    position: absolute;
+    left: 0;
+}
+
+.name, .value {
+    padding: 0 15px;
+}
+
+[data-plan] .benefit .value {
+    position: absolute;
+    right: 10px;
+    /* width: 20px; */
+    text-align: left;
+}
+
+.flip-card .price-card .btn {
+    justify-self: flex-end;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    background: var(--background-grad);
+}
+
+.price-card:hover .btn {
+    background: #fff;
+}
+
+
+/* @media screen and (max-width: 720px) {
+    
+} */
+
+
+
