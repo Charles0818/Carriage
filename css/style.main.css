@@ -4,9 +4,9 @@
     transition: all 0.5s;
     vertical-align: middle;
     background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 *, ::after, ::before, html, body {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 
@@ -127,7 +127,7 @@ header {
 
 
 .mrg-b {
-    margin-bottom: 100vh;
+    margin-bottom: 400px;
 }
 
 .page {
@@ -200,7 +200,6 @@ header {
 .top--navlinks li a, 
  .navbar2 ul li a{
     display: block;
-    
     font: 12px var(--font-family);
     text-transform: uppercase;
     font-weight: 500;
@@ -215,10 +214,6 @@ header {
 .navbar2, [data-testimony] .wrapper{
     width: 85%;
     margin: 20px 7.5%;
-}
-
-.links li {
-    margin-right: 25px;
 }
 
 .links li a, .navbar2 ul li a, .dropdown--btn {
@@ -238,15 +233,15 @@ header {
 
 #home #favicon
 {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 5px;
     vertical-align: middle;
 }
 
 #home  span{
     font-family:var(--font-family);
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: var(--color-white);
     font-weight: 900;
 
@@ -429,12 +424,12 @@ a.white--bckgr {
 
 .image-container {
     width: 60%;
-    height: 70%;
+    height: auto;
     border-radius: 15px;
 }
 
 .image-container img {
-    width: 40vh;
+    width: 100%;
     height: auto;
 }
 
@@ -530,7 +525,7 @@ section.getting-started::before {
 
 
 .irregular-shape {
-    width: 52%;
+    width: 57%;
     height: 650px;
     background: linear-gradient(to bottom right,
                                 #390dff50, #6e05f85b);
@@ -557,23 +552,29 @@ section.getting-started::before {
     display: block;
 }
 
-.display-container, .card {
+.display-container {
     display: flex;
-    position: relative;
-    left: 0;
-    top: 0;
     justify-content: center;
     flex-flow: row wrap;
     align-items: center;
-    background: #fff;
-    width: 55%;
     height: 450px;
     box-shadow: 5px 8px 10px #a0a0a0;
     z-index: 2;
     transition: all 0.5s ease;
 }
 
-.display-container > img, .circled > img {
+.display-container, .card {
+    position: relative;
+    background: #fff;
+    width: 50%;
+}
+
+.card {
+    height: auto !important;
+}
+
+.display-container > img,
+ .circled > img {
     width: 100%;
     height: 100%;
     
@@ -594,6 +595,7 @@ section.getting-started::before {
 
 .relative--content {
     width: 42%;
+    height: auto;
 }
 
 .relative--content .text-content {
@@ -610,8 +612,8 @@ section.getting-started::before {
 
 .text-content > .heading {
     /* color: rgb(0, 0, 0); */
-    font: 28px var(--font-family) !important;
-    font-weight: 600 !important;
+    font: 26px var(--font-family);
+    font-weight: 600;
     margin-top: 20px;
 
 }
@@ -622,7 +624,7 @@ section.getting-started::before {
 }
 
 .sm {
-    font-size: .7em !important;
+    font-size: .7em;
 }
 
 
@@ -685,6 +687,10 @@ section.getting-started::before {
 
 .resources > .wrapper.grid-display > .card {
     width: 45%;
+}
+
+.resources .card > .text-content {
+    padding: 25px;
 }
 
 
@@ -940,6 +946,7 @@ footer .grid-display > .grid-element {
 }
 
 footer .grid-element > .heading {
+    display: inline-block;
     font: 16px var(--font-family);
     font-weight: 500;
     text-align: left;
@@ -964,42 +971,66 @@ footer .grid-element > ul li a {
     text-transform: capitalize;
 }
 
-
-@media screen and (max-width: 470px) {
-    .wave--down::before {
-        height: 4.7rem;
-        background: url('../images/wave-small.png') center no-repeat;
-        background-size: cover;
-    }
-
-    .col-2 {
-        padding-bottom: 4.7rem;
+@media (max-width: 1199.98px) {
+    .mrg-b {
+        margin-bottom: 100vh;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 1050px) {
+    .quicklink[data-trial--btn] {
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 850px) {
+    .quicklink[data-trial--btn] {
+        display: none;
+    }
+}
 
-    header::before {
-        height: 4.7rem;
-        background: url('../images/wave-medium.png') center no-repeat;
-        background-size: cover;
+@media screen and (max-width: 991.98px) {
+    .irregular-shape {
+        display: none;
     }
 
-    .heading {
-        font-size: 1.5em;
+    .dynamic {
+        flex-direction: column;
     }
 
-    .sub-heading {
-        font-size: 1.1em;
+    .display-container > .circled {
+        display: none;
     }
 
-    #home #favicon {
-        width: 10vw;
-        height: 10vw;
+    /* .grid-display {
+        flex-direction: column;
+    } */
+
+    .grid-display > .grid-element,
+    .grid-element > img {
+        width: 100%;
+    }
+    
+    .relative--content {
+        width: 100%;
     }
 
+    
+}
+
+@media screen and (max-width: 890px) {
+    
     .left, .navbar1 {
         display: none;
+    }
+
+  
+
+    .fa-bars {
+        display: inline-block;
+    }
+
+    .fa-bars:hover {
+        background: var(--background-color);
     }
 
     .wrap--main-nav {
@@ -1019,22 +1050,13 @@ footer .grid-element > ul li a {
         right: 0;
     }
 
-    .fa-bars {
-        display: inline-block;
-    }
-
-    .fa-bars:hover {
-        background: var(--background-color);
-    }
-
-    .links li, .dropdown {
+    .dropdown {
         display: block;
         width: 100%;
         border-bottom: 1px solid #a0a0a079;
         margin-bottom: 15px;
      }
 
-    .links li a, .navbar2 ul li a,
     .dropdown > .dropdown--btn {
         font-size: .85em;
         color: #000;
@@ -1077,19 +1099,15 @@ footer .grid-element > ul li a {
         display: none;
     }
 
+
     .col-2 > .desc {
         order: 2;
         flex: 100%;
         max-width: 100%;
     }
 
-    .mrg-b {
-        margin-bottom: 10vh;
-    }
-
-    .grid-display > .grid-element {
-        flex: 100%;
-        max-width: 100%;
+    .image-container {
+        display:none;
     }
 
     .grid-element > img {
@@ -1102,14 +1120,70 @@ footer .grid-element > ul li a {
         text-align: left;
     }
 
+}
+
+@media screen and (max-width: 767.98px) {
+
+    header::before {
+        height: 4.7rem;
+        background: url('../images/wave-medium.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .heading {
+        font-size: 1.5em;
+    }
+
+    .sub-heading {
+        font-size: 1.1em;
+    }
+
+    /* #home #favicon {
+        width: 10vw;
+        height: 10vw;
+    } */
+
+   
+   
+
+    .links li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #a0a0a079;
+        margin-bottom: 15px;
+     }
+
+    .links li a, .navbar2 ul li a {
+        font-size: .85em;
+        color: #000;
+        /* padding-left: 0; */
+    }
+
+    section{
+        position: relative;
+        padding: 30px 0;
+        margin-top: 20px;
+    }
+
+
     .irregular-shape {
         width: 95%;
         min-width: 85%;
     }
 
+    /* .relative--content .text-content {
+        margin: 40px auto;
+    } */
+
     .relative--content,
     .resources > .wrapper.grid-display > .card {
         width: 100%;
+        /* padding-bottom: 80px; */
+    }
+
+    .resources > .wrapper.grid-display > .card {
+        display: block;
+        /* padding-top: 30px; */
     }
 
     .text {
@@ -1125,14 +1199,79 @@ footer .grid-element > ul li a {
         max-width: 100%;
         /* text-align: justify; */
     }
-    
+
+    .mrg-b {
+        margin-bottom: 0vh;
+    }
+
     footer {
         position: relative;
     }
+    
+   
 
     footer .grid-display > .grid-element {
-        flex: 38.9%;
-        max-width: 38.9%;
+        flex: 49%;
+        /* max-width: 38.9%; */
+        margin: 0;
     }
 
 }
+
+@media screen and (max-width: 575.98px) {
+    
+    
+
+    .wave--down::before {
+        height: 4.7rem;
+        background: url('../images/wave-small.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .col-2 {
+        padding-bottom: 4.7rem;
+    }
+
+    .desc {
+        margin-bottom: 20px;
+    }
+
+    .text-content > .heading {
+        font-size: 1.2em;
+    }
+
+    /* .btn{
+        display:block;
+        text-align: center;
+        padding: 10px 15px;
+        margin-bottom: 10px;
+    } */
+
+    footer .grid-display {
+        flex-direction: column;
+    }
+
+    footer .grid-display > .grid-element {
+        width: 100% !important;
+    }
+}
+
+/* @media screen and (max-width: 380px) {
+    .wave--down::before {
+        height: 4.7rem;
+        background: url('../images/wave-small.png') center no-repeat;
+        background-size: cover;
+    }
+
+    .col-2 {
+        padding-bottom: 4.7rem;
+    }
+
+    footer .grid-display {
+        flex-direction: column;
+    }
+
+    footer .grid-display > .grid-element {
+        width: 100% !important;
+    }
+} */
