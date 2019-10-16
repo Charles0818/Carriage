@@ -278,9 +278,13 @@ section {
 }
 
 
-/* @media screen and (max-width: 720px) {
-    
-} */
+@media (max-width: 767.98px) {
+    .flip-card {
+        width: 345px;
+        margin-bottom: 25px;
+    }
+
+}
 
 
 
